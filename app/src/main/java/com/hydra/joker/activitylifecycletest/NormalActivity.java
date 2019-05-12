@@ -1,5 +1,7 @@
 package com.hydra.joker.activitylifecycletest;
 
+import android.content.Context;
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.Layout;
@@ -12,7 +14,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class NormalActivity extends AppCompatActivity {
+public class NormalActivity extends BabaActivity {
 
     private Button mBtn1;
 
@@ -38,5 +40,12 @@ public class NormalActivity extends AppCompatActivity {
                 toast.show();
             }
         });
+    }
+
+    public static void actionStart (Context content, String data1, String data2){
+        Intent intent = new Intent(content, NormalActivity.class);
+        intent.putExtra("first", data1);
+        intent.putExtra("second", data2);
+        content.startActivity(intent);
     }
 }

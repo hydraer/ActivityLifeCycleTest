@@ -3,7 +3,7 @@ package com.hydra.joker.activitylifecycletest;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-public class DialogActivity extends AppCompatActivity {
+public class DialogActivity extends BabaActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
